@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.SS' | <%=title%></title>
+  </head>
+  <body>
+    <%- include('./partial/nav.ejs') %>
+
+    <div class="blog-content">
+      <h1>Welcome to .SS' Blog</h1>
+      <p>
+        This is a simple blog application built using Node.js, Express, and EJS.
+      </p>
+    </div>
+
+    <div class="blog">
+      <h2>Recent Posts</h2>
+      <% blogs.forEach((blog) => { %>
+      <div class="blog-post">
+        <h3><%= blog.title %></h3>
+        <p><%= blog.snippet %></p>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
